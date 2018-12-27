@@ -75,11 +75,11 @@ if not engine.dialect.has_table(engine, 'Data_Pipeline'):  # If table don't exis
 
 while True:
     print('Started')
-    papers = []
-    rss_feed = feedparser.parse('http://export.arxiv.org/rss/cs')
-    max_date = get_max_date_postgre()
+    papers = [] #intialize empty list to hold required information from the feed
+    rss_feed = feedparser.parse('http://export.arxiv.org/rss/cs') #Request Feed using feedparser
+    max_date = get_max_date_postgre() #check for the Date from the Pipeline_Update for maximum date to make desicion logic to process feed or not.
     print(parser.parse(rss_feed.feed.updated))
-    if len(rss_feed.entries) > 0:
+    if len(rss_feed.entries) > 0: # If Feed Length is greater than 0 then only it is feasible to process data
         if max_date is None:
             push_feed_database(engine,rss_feed,papers)
         else:
