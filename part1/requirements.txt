@@ -1,0 +1,6 @@
+pandas
+numpy
+feedparser
+nltk
+psycopg2
+SQLAlchemy

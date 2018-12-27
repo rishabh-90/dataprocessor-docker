@@ -1,0 +1,6 @@
+pandas
+numpy
+feedparser
+nltk
+beautifulsoup4
+psycopg2
