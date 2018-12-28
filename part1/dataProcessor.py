@@ -15,7 +15,7 @@ nltk.download('stopwords')
 #Common Variables for the Script
 stop_words = stopwords.words('english')
 engine = create_engine('postgresql://postgres:example@db:5432/postgres') #Connection to the Postgres Working in different container
-repeat_time_seconds = int(float(sys.argv[1])*60*60) #Time interval for the checking the feed after Nth hour
+repeat_time_seconds = int(float(sys.argv[1])*60) #Time interval for the checking the feed after Nth hour
 
 def push_postgres_table(df, table, engine):
     '''
