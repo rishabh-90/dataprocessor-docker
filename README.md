@@ -1,6 +1,8 @@
 # dataprocessor-docker
 Simple Data Processor built using Docker
 
+Dataprocessor is checking for new feed after Nth Minute wich can be changed in the Dockerfile of part1 cmd section after filename third arugment is minutes with just number for eg: CMD [ "python", "dataProcessor.py" ,"put the number here"]
+
 ## Build Setup
 
 ``` bash
